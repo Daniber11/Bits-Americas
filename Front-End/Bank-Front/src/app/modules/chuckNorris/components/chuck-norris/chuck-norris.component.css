@@ -1,0 +1,24 @@
+div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top: 19px;
+}
+
+:host {
+  display: block;
+  margin-top: 20px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+}
+::ng-deep button {
+  color: white !important;
+}

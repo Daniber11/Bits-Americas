@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+}
+
+.alinear {
+  text-align: center;
+  margin-top: 20px;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: auto;
+}
+
+mat-form-field {
+  width: 140%;
+}
+
+.mat-cell:nth-child(1),
+.mat-header-cell.mat-cell:nth-child(1) {
+  flex: 0 0 6%;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-container > * {
+  width: 100%;
+}

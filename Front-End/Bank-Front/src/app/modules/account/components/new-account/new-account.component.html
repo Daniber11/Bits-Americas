@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>{{ estadoFormulario }} Nueva Cuenta</h2>
+<mat-dialog-content>
+  <form [formGroup]="accountForm">
+    <div class="account-container">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Número"
+          formControlName="number"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Saldo"
+          formControlName="balance"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Cliente</mat-label>
+        <mat-select formControlName="client">
+          <mat-option *ngFor="let client of clients" [value]="client.id">
+            {{ client.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="primary"
+    (click)="onSave()"
+    [disabled]="accountForm.invalid"
+  >
+    <mat-icon>save</mat-icon> Guardar
+  </button>
+  <button mat-button color="primary" (click)="onCancel()">
+    <mat-icon>cancel</mat-icon> Cancelar
+  </button>
+</mat-dialog-actions>

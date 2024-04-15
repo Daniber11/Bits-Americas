@@ -1,0 +1,8 @@
+.movement-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movement-container > * {
+  width: 100%;
+}

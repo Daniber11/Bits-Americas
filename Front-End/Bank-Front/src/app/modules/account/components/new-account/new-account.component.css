@@ -1,0 +1,8 @@
+.account-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-container > * {
+  width: 100%;
+}

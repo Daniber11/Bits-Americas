@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>{{ estadoFormulario }} Nuevo Movimiento</h2>
+<mat-dialog-content>
+  <form [formGroup]="movementForm">
+    <div class="movement-container">
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <input matInput formControlName="type" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Fecha</mat-label>
+        <input
+          matInput
+          formControlName="date"
+          [matDatepicker]="picker"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Valor</mat-label>
+        <input matInput formControlName="value" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Cuenta</mat-label>
+        <mat-select formControlName="account" required>
+          <mat-option *ngFor="let account of accounts" [value]="account.id">
+            {{ account.number }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="primary"
+    (click)="onSave()"
+    [disabled]="movementForm.invalid"
+  >
+    <mat-icon>save</mat-icon> Guardar
+  </button>
+  <button mat-button color="primary" (click)="onCancel()">
+    <mat-icon>cancel</mat-icon> Cancelar
+  </button>
+</mat-dialog-actions>

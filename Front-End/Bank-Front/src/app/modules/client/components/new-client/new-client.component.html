@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>{{ estadoFormulario }} Nuevo Cliente</h2>
+<mat-dialog-content>
+  <form [formGroup]="clienteForm">
+    <div class="cliente-container">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Nombre"
+          formControlName="nombre"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea
+          matInput
+          placeholder="Dirección"
+          formControlName="direccion"
+          required
+        ></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Teléfono"
+          formControlName="telefono"
+          required
+        />
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="primary"
+    (click)="onSave()"
+    [disabled]="clienteForm.invalid"
+  >
+    <mat-icon>save</mat-icon> Guardar
+  </button>
+
+  <button mat-button color="primary" (click)="onCancel()">
+    <mat-icon>cancel</mat-icon> Cancelar
+  </button>
+</mat-dialog-actions>

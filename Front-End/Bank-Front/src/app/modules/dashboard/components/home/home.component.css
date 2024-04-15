@@ -1,0 +1,48 @@
+.grafico {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.chartContainer canvas {
+  max-height: 250px;
+  width: auto;
+}
+
+.chartContainer {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.monthly-totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.monthly-total {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.month {
+  font-weight: bold;
+}
+
+.total {
+  font-size: 1.2em;
+}
+
+.negative-value {
+  color: red;
+}
+
+.titulos {
+  text-align: center;
+  margin-top: 30px;
+}
