@@ -52,6 +52,7 @@ SidenavComponent: Utiliza MediaMatcher para determinar si el dispositivo es móv
 AccountService: Define métodos para obtener, guardar, actualizar y eliminar cuentas, así como para buscar cuentas por ID.
 
 ChuckNorrisService: Define un método para obtener un chiste aleatorio de la API de Chuck Norris.
+
 ClientService: Define métodos para obtener, guardar, actualizar y eliminar clientes, así como para buscar clientes por ID.
 
 MovementService: Define métodos para obtener, guardar, actualizar y buscar movimientos, así como para buscar movimientos por fecha e ID.
